@@ -345,7 +345,7 @@ const buttons = document.querySelectorAll(".box-item");
 
             if (ketqua === 2) {
                 var chienthang = document.querySelector('.box');
-                chienthang.style.background = "url('/Du_An_Lon/assets/img/ngudot.jpg'";
+                chienthang.style.background = "./assets/img/ngudot.jpg'";
 
                 var text = document.querySelector('.player_win_2');
                 text.style.display = 'block';
@@ -359,7 +359,7 @@ const buttons = document.querySelectorAll(".box-item");
             }
             else if (ketqua == 3) {
                 var chienthang = document.querySelector('.box');
-                chienthang.style.background = "url('/Du_An_Lon/assets/img/saitama.jpg') top center / cover no-repeat";
+                chienthang.style.background = "url('./assets/img/saitama.jpg') top center / cover no-repeat";
 
                 var text = document.querySelector('.player_draw');
                 text.style.display = 'block';
