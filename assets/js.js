@@ -345,14 +345,14 @@ const buttons = document.querySelectorAll(".box-item");
 
             if (ketqua === 2) {
                 var chienthang = document.querySelector('.box');
-                chienthang.style.background = "./assets/img/ngudot.jpg'";
+                chienthang.style.background = "url(./assets/img/ngudot.jpg')";
 
                 var text = document.querySelector('.player_win_2');
                 text.style.display = 'block';
             }
             else if (ketqua === 1) {
                 var chienthang = document.querySelector('.box');
-                chienthang.style.background = "url('./assets/img/minh_png.png'";
+                chienthang.style.background = "url('./assets/img/minh_png.png')";
 
                 var text = document.querySelector('.player_win_1');
                 text.style.display = 'block';
