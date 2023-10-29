@@ -49,7 +49,7 @@ const buttons = document.querySelectorAll(".box-item");
             
 
 
-            if (nut_x.style.display != "block" && nut_o.style.display != "block") {
+            if (nut_x.style.display != "block" && nut_o.style.display != "block" && ketqua === 0) {
                 nut_o.style.display = "block";
 
                 const x1 = nutXButton1.style.display;
@@ -345,7 +345,7 @@ const buttons = document.querySelectorAll(".box-item");
 
             if (ketqua === 2) {
                 var chienthang = document.querySelector('.box');
-                chienthang.style.background = "url(./assets/img/ngudot.jpg')";
+                chienthang.style.background = "url('./assets/img/ngudot.jpg')";
 
                 var text = document.querySelector('.player_win_2');
                 text.style.display = 'block';
