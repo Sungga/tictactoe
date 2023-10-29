@@ -1,0 +1,267 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+#main {
+    /* background: url('/assets/img/hahaha.jpg') top center / cover no-repeat; */
+    /* background-color: #000; */
+    height: 100vh;
+
+    display: flex;
+    position: relative;
+    overflow: hidden;
+}
+
+/* background video */
+video {
+    width: 100%;
+    /* height: 50vh; */
+    position: absolute;
+    z-index: -100;
+    top: 0;
+    left: 0;
+}
+
+/* title */
+h1 {
+    color: blueviolet;
+    font-size: 60px;
+    position: absolute;
+    left: 33.5%;
+    top: 5%;
+    text-shadow: 
+        0 0 5px rgb(255, 134, 255),
+        0 0 10px rgb(255, 20, 255),
+        0 0 15px rgb(250, 68, 229),
+        0 0 20px rgb(255, 90, 175);
+}
+
+.box {
+    margin: auto;
+    margin-top: 200px;
+    height: 375px;
+    width: 375px;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    background-image: none;
+}
+
+.box-item {
+    width: 125px;
+    height: 125px;
+    background-color: rgba(0, 0, 248, 0.4);
+    border: rgba(151, 146, 146, 0.7) 1px solid;
+
+    position: relative;
+}
+
+
+
+/* ảnh tuyển thủ */
+.box-img_1 {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+
+    top: 170px;
+    left: 40px;
+    
+    border: rgba(111, 0, 171, 0.7) 5px solid;  
+    background: url('./img/hoahoa.jpg') top center / cover no-repeat;
+    /* background-color: blueviolet; */
+}
+
+.box-img_2 {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    top: 170px;
+    right: 40px;
+
+    border: rgba(111, 0, 171, 0.7) 5px solid;  
+    background: url('./img/hoahoa.jpg') top center / cover no-repeat;
+    /* background-color: blueviolet; */
+}
+
+.img_2,
+.img_1 {
+    position: absolute;
+    bottom: 0;
+    width: 88%;
+    height: 88%;
+
+    transition-property: width, height;
+    transition-duration: 0.23s;
+    transition-timing-function: ease-in-out;
+}
+
+/* caro o anh */
+.o_anh {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    top: 40px;
+    left: 25%;
+
+    opacity: 0.5;
+}
+
+.x_anh {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    top: 35px;
+    right: 25%;
+    opacity: 0.5;
+}
+
+.play {
+    position: absolute;
+    bottom: 30px;
+    left: calc(50% - 200px / 2);
+
+    width: 200px;
+    height: 50px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: rgba(255, 165, 0, 0.8);
+    border: 0px;
+}
+
+.play:hover {
+    background-color: rgb(255, 165, 0);
+}
+
+/* CARO */
+.nut_o {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+
+    display: none;
+}
+
+.nut_x {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    right: 10%;
+
+    display: none;
+}
+
+.box_win {
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    background-color: rgba(191, 0, 0, 0.5);
+    top: calc(50% - 100px);
+    left: calc(50% - 100px);
+    display: none;
+
+    
+}
+
+/* cloud */
+
+.cloud-text {
+    position: absolute;
+    width: 200px;
+    height: 50px;
+    top: calc(50% - 50px);
+    z-index: 101;
+    border: 0px;
+    border-radius: 4px;
+    color: pink;
+    font-weight: 600;
+    font-size: 20px;
+    background-color: rgb(255, 90, 175);
+    box-shadow: 
+    0 -0.5em 0.5em transparent,
+    0 0.5em 0.5em transparent,
+    0 0.25em 0.3em -0.2em hsla(var(--hue), var(--sat), 50%, 0.46), 
+    0 0.25em 0.75em hsla(var(--hue), calc(var(--sat) - 10%), 40%, 0.3);
+
+}
+
+.cloud {
+    position: absolute;
+    z-index: 100;
+    display: block;
+    transition-property: all;
+    transition-timing-function: ease;
+    transition-duration: 2s;
+    /* transform: translateX(1400px); */
+}
+
+/* .cloud:hover {
+    transform: translateX(1400px);
+} */
+
+.cloud_1 {
+    width: 1000px;
+    height: 1000px;
+    top: -200px;
+    left: 0;
+    transition-property: all;
+}
+
+.cloud_2 {
+    width: 1400px;
+    height: 1000px;
+    top: -100px;
+    right: -100px;
+    transition-property: all;
+}
+
+
+.player_win_1 {
+    color: rgb(210, 210, 25);
+    font-size: 50px;
+    position: absolute;
+    top: 80px;
+    left: 100px;
+
+    display: none;
+}
+
+.player_win_2 {
+    color: rgb(210, 210, 25);
+    font-size: 50px;
+    position: absolute;
+    top: 80px;
+    right: 100px;
+    
+    display: none;
+}
+
+.player_draw {
+    top: 110px;
+    left: calc(50% - 85px);
+    position: absolute;
+    color: rgb(255, 132, 0);
+    font-size: 70px;
+
+    display: none;
+}
+
+.player_name {
+    color: rgb(164, 1, 1);
+    font-size: 70px;
+    position: absolute;
+    bottom: 80px;
+    left: 150px;
+}
+
+.ai_name {
+    color: rgb(164, 1, 1);
+    font-size: 70px;
+    position: absolute;
+    bottom: 80px;
+    right: 190px;
+}
+
+
