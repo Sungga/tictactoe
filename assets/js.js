@@ -72,9 +72,6 @@ const buttons = document.querySelectorAll(".box-item");
                 const o7 = nutOButton7.style.display;
                 const o8 = nutOButton8.style.display;
                 const o9 = nutOButton9.style.display;
-                if ((o1 === 'block' || x1 === 'block') && (o2 === 'block' || x2 === 'block') && (o3 === 'block' || x3 === 'block') && (o4 === 'block' || x4 === 'block') && (o5 === 'block' || x5 === 'block') && (o6 === 'block' || x6 === 'block') && (o7 === 'block' || x7 === 'block') && (o8 === 'block' || x8 === 'block') && (o9 === 'block' || x9 === 'block')){
-                    ketqua = 3;
-                }
                 if (o1 === 'block' && o2 === 'block' && o3 === 'block'){
                     ketqua = 1;
                 }
@@ -98,6 +95,9 @@ const buttons = document.querySelectorAll(".box-item");
                 }
                 else if(o3 === 'block' && o5 === 'block' && o7 === 'block'){
                     ketqua = 1;
+                }
+                else if ((o1 === 'block' || x1 === 'block') && (o2 === 'block' || x2 === 'block') && (o3 === 'block' || x3 === 'block') && (o4 === 'block' || x4 === 'block') && (o5 === 'block' || x5 === 'block') && (o6 === 'block' || x6 === 'block') && (o7 === 'block' || x7 === 'block') && (o8 === 'block' || x8 === 'block') && (o9 === 'block' || x9 === 'block')){
+                    ketqua = 3;
                 }
 
                 // tuyen thu nhap nhay
