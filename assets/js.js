@@ -316,7 +316,7 @@ const buttons = document.querySelectorAll(".box-item");
                             array.push(i);
                         }
                     }
-                    var testArr = Math.floor(Math.random() * arr.length);
+                    var testArr = Math.floor(Math.random() * array.length);
                     console.log(testArr);
                     var pick = nut_x_list[array[testArr]];
                     pick.style.display = 'block'
