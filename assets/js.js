@@ -49,7 +49,7 @@ const buttons = document.querySelectorAll(".box-item");
             
 
 
-            if (nut_x.style.display != "block" && nut_o.style.display != "block" && ketqua === 0) {
+            if (nut_x.style.display != "block" && nut_o.style.display != "block") {
                 nut_o.style.display = "block";
 
                 const x1 = nutXButton1.style.display;
@@ -303,18 +303,32 @@ const buttons = document.querySelectorAll(".box-item");
                         
                     }
                 }
+                else if (o5 !== 'block' && x5 !== 'block') {
+                    nutXButton5.style.display = 'block'
+                }
                 else {
-                // var arr = [];
+                    var arr = [];
                     var nut_x_list = document.querySelectorAll('.nut_x');
                     var nut_o_list = document.querySelectorAll('.nut_o');
+                    var nut = document.querySelectorAll('.box');
                     for (var i = 0; i < nut_x_list.length; i++) {
-                        if (nut_x_list[i].style.display !== 'block' && nut_o_list[i].style.display !== 'block') {
-                            var pick = nut_x_list[i];
-                            pick.style.display = 'block'
-                            break;
+                        console.log(i);
+                        if (nut_x_list[i].style.display != 'block' && nut_o_list[i].style.display != 'block') {
+                            arr.push(i);
+                        }else {
                         }
                     }
+                    console.log(arr);
+                    var testArr = Math.floor(Math.random() * arr.length);
+                    console.log(testArr);
+                    var pick = nut_x_list[arr[testArr]];
+                    pick.style.display = 'block'
                 }
+
+
+
+
+
             }
             }
             
@@ -345,21 +359,21 @@ const buttons = document.querySelectorAll(".box-item");
 
             if (ketqua === 2) {
                 var chienthang = document.querySelector('.box');
-                chienthang.style.background = "url('./assets/img/ngudot.jpg')";
+                chienthang.style.background = "url('/Du_An_Lon/assets/img/ngudot.jpg'";
 
                 var text = document.querySelector('.player_win_2');
                 text.style.display = 'block';
             }
             else if (ketqua === 1) {
                 var chienthang = document.querySelector('.box');
-                chienthang.style.background = "url('./assets/img/minh_png.png')";
+                chienthang.style.background = "url('./assets/img/minh_png.png'";
 
                 var text = document.querySelector('.player_win_1');
                 text.style.display = 'block';
             }
             else if (ketqua == 3) {
                 var chienthang = document.querySelector('.box');
-                chienthang.style.background = "url('./assets/img/saitama.jpg') top center / cover no-repeat";
+                chienthang.style.background = "url('/Du_An_Lon/assets/img/saitama.jpg') top center / cover no-repeat";
 
                 var text = document.querySelector('.player_draw');
                 text.style.display = 'block';
