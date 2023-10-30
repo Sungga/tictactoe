@@ -52,7 +52,7 @@ const buttons = document.querySelectorAll(".box-item");
 
             if (nut_x.style.display != "block" && nut_o.style.display != "block" && ketqua === 0) {
                 nut_o.style.display = "block";
-
+                
                 const x1 = nutXButton1.style.display;
                 const x2 = nutXButton2.style.display;
                 const x3 = nutXButton3.style.display;
@@ -62,7 +62,7 @@ const buttons = document.querySelectorAll(".box-item");
                 const x7 = nutXButton7.style.display;
                 const x8 = nutXButton8.style.display;
                 const x9 = nutXButton9.style.display;
-
+                
                 const o1 = nutOButton1.style.display;
                 const o2 = nutOButton2.style.display;
                 const o3 = nutOButton3.style.display;
@@ -72,6 +72,9 @@ const buttons = document.querySelectorAll(".box-item");
                 const o7 = nutOButton7.style.display;
                 const o8 = nutOButton8.style.display;
                 const o9 = nutOButton9.style.display;
+                if ((o1 === 'block' || x1 === 'block') && (o2 === 'block' || x2 === 'block') && (o3 === 'block' || x3 === 'block') && (o4 === 'block' || x4 === 'block') && (o5 === 'block' || x5 === 'block') && (o6 === 'block' || x6 === 'block') && (o7 === 'block' || x7 === 'block') && (o8 === 'block' || x8 === 'block') && (o9 === 'block' || x9 === 'block')){
+                    ketqua = 3;
+                }
                 if (o1 === 'block' && o2 === 'block' && o3 === 'block'){
                     ketqua = 1;
                 }
@@ -305,22 +308,44 @@ const buttons = document.querySelectorAll(".box-item");
                     }
                 }
                 else if (o5 !== 'block' && x5 !== 'block') {
-                    nutXButton5.style.display = 'block'
+                    nutXButton5.style.display = 'block';
                 }
                 else {
-                    var array = [];
+                    var nuocDi = [];
                     var nut_x_list = document.querySelectorAll('.nut_x');
                     var nut_o_list = document.querySelectorAll('.nut_o');
                     for (var i = 0; i < nut_x_list.length; i++) {
                         if (nut_x_list[i].style.display != 'block' && nut_o_list[i].style.display != 'block') {
-                            array.push(i);
+                            nuocDi.push(i);
                         }
                     }
-                    var testArr = Math.floor(Math.random() * array.length);
-                    console.log(testArr);
-                    var pick = nut_x_list[array[testArr]];
-                    pick.style.display = 'block'
+                    var randomNuocDi = Math.floor(Math.random() * nuocDi.length);
+                    var pick = nut_x_list[nuocDi[randomNuocDi]];
+                    pick.style.display = 'block';
+                    if ((o1 === 'block' || x1 === 'block') && (o2 === 'block' || x2 === 'block') && (o3 === 'block' || x3 === 'block') && (o4 === 'block' || x4 === 'block') && (o5 === 'block' || x5 === 'block') && (o6 === 'block' || x6 === 'block') && (o7 === 'block' || x7 === 'block') && (o8 === 'block' || x8 === 'block') && (o9 === 'block' || x9 === 'block')){
+                        ketqua = 3;
+                    }
                 }
+
+
+
+                // else if (o5 !== 'block' && x5 !== 'block') {
+                //     nutXButton5.style.display = 'block'
+                // }
+                // else {
+                //     var arr = [];
+                //     var nut_x_list = document.querySelectorAll('.nut_x');
+                //     var nut_o_list = document.querySelectorAll('.nut_o');
+                //     for (var i = 0; i < nut_x_list.length; i++) {
+                //         if (nut_x_list[i].style.display != 'block' && nut_o_list[i].style.display != 'block') {
+                //             arr.push(i);
+                //         }
+                //     }
+                //     var testArr = Math.floor(Math.random() * arr.length);
+                //     console.log(testArr);
+                //     var pick = nut_x_list[arr[testArr]];
+                //     pick.style.display = 'block'
+                // }
             }
             }
             
