@@ -313,7 +313,7 @@ const buttons = document.querySelectorAll(".box-item");
                     var nut_o_list = document.querySelectorAll('.nut_o');
                     for (var i = 0; i < nut_x_list.length; i++) {
                         if (nut_x_list[i].style.display != 'block' && nut_o_list[i].style.display != 'block') {
-                            arr.push(i);
+                            array.push(i);
                         }
                     }
                     var testArr = Math.floor(Math.random() * arr.length);
