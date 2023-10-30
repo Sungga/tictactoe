@@ -304,17 +304,22 @@ const buttons = document.querySelectorAll(".box-item");
                         
                     }
                 }
+                else if (o5 !== 'block' && x5 !== 'block') {
+                    nutXButton5.style.display = 'block'
+                }
                 else {
-                // var arr = [];
+                    var array = [];
                     var nut_x_list = document.querySelectorAll('.nut_x');
                     var nut_o_list = document.querySelectorAll('.nut_o');
                     for (var i = 0; i < nut_x_list.length; i++) {
-                        if (nut_x_list[i].style.display !== 'block' && nut_o_list[i].style.display !== 'block') {
-                            var pick = nut_x_list[i];
-                            pick.style.display = 'block'
-                            break;
+                        if (nut_x_list[i].style.display != 'block' && nut_o_list[i].style.display != 'block') {
+                            arr.push(i);
                         }
                     }
+                    var testArr = Math.floor(Math.random() * arr.length);
+                    console.log(testArr);
+                    var pick = nut_x_list[array[testArr]];
+                    pick.style.display = 'block'
                 }
             }
             }
