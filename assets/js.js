@@ -304,6 +304,9 @@ const buttons = document.querySelectorAll(".box-item");
                         
                     }
                 }
+                else if (o5 !== 'block' && x5 !== 'block') {
+                    nutXButton5.style.display = 'block'
+                }
                 else {
                 var arr = [];
                     var nut_x_list = document.querySelectorAll('.nut_x');
